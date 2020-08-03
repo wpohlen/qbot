@@ -31,9 +31,9 @@ async function onShout(){
   if(firstshout == true){
     firstshout = false;
     shout = await roblox.getShout(Number(process.env.groupId));
-    setTimeout(onShout, 30000);
+    setTimeout(onShout, 300);
   } else {
-    setTimeout(onShout, 30000);
+    setTimeout(onShout, 300);
     let currentshout = await roblox.getShout(Number(process.env.groupId));
     if(currentshout.body == shout.body) return;
     if(currentshout.body){
